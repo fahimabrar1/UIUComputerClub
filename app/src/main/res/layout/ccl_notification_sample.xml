@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:background="@color/lightOrange" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/notif_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2/12/2020"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"></TextView>
+
+                <TextView
+                    android:id="@+id/notif_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WED"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/notif_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:02pm "
+                    android:textColor="@color/black"
+                    android:textSize="8dp"></TextView>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/lightblack" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Upcoming Event : "
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/ccl_notification_event_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CodeChef Smack Down 2020"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"
+
+                            android:textStyle="bold"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Event Venue : "
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/ccl_notification_event_venue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UIU Auditorium"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"
+                            android:textStyle="italic"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Event Date : "
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/ccl_notification_event_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="21/2/2020"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Event Time : "
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/ccl_notification_event_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="9:30 - 12:00pm"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:src="@drawable/ic_baseline_label_important_24"></ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightblack" />
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

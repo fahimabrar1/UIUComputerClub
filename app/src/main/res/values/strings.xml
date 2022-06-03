@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">uiuccl</string>
+    <string name="app_name">UIU CCL App</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="student_email_id">Student Email ID</string>
+    <string name="password">Password</string>
+    <string name="do_you_have_and_account">Do you have and account?</string>
+    <string name="LOG_IN">LOG IN</string>
+    <string name="SIGN_UP">SIGN UP</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="fahim_abrar">Fahim Abrar</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

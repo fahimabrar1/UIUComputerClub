@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".log_In">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="187dp"
+        android:layout_height="190dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ccl_logo"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/login"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/log_in_button"
+        android:fontFamily="sans-serif"
+        android:text="@string/LOG_IN"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.892" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/sign_up_button"
+        android:fontFamily="sans-serif"
+        android:text="@string/SIGN_UP"
+        android:textAlignment="center"
+        android:textColor="@color/lightOrange"
+        android:textSize="14sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="184dp"
+        android:layout_height="18dp"
+        android:text="@string/do_you_have_and_account"
+        android:textAlignment="center"
+        android:textColor="@color/lightblack"
+        app:layout_constraintBottom_toTopOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    <EditText
+        android:id="@+id/studentEmailID"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:hint="@string/student_email_id"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/lightblack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.14999998" />
+
+    <EditText
+        android:id="@+id/StudnetPassword"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/lightblack"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentEmailID"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="114dp"
+        android:layout_height="21dp"
+        android:clickable="true"
+        android:text="@string/forgot_password"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:text="Developed By "
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:text="@string/fahim_abrar"
+            android:textAlignment="viewStart"
+            android:textColor="@color/orange"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

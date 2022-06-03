@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:background="@color/lightOrange" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:padding="20dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/dpt_notif_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2/12/2020"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"></TextView>
+
+                <TextView
+                    android:id="@+id/dpt_notif_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WED"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/dpt_notif_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:02pm "
+                    android:textColor="@color/black"
+                    android:textSize="8dp"></TextView>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/lightblack" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/dpt_notif_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="center_vertical"
+                    android:text="students entry into campus is strictly prohibited on february 5, 2020 and februery 6, 2020"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"></TextView>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightblack" />
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

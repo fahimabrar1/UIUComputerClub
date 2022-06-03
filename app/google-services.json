@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "674689898015",
+    "firebase_url": "https://uiuccl.firebaseio.com",
+    "project_id": "uiuccl",
+    "storage_bucket": "uiuccl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674689898015:android:9db9117134ab4ddc8e272a",
+        "android_client_info": {
+          "package_name": "com.example.uiucclapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674689898015-f9omkjf93ni47qs2iu61cpo1270na0io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzLoCb-rDirMqzh27Y6w9XWZW3TnD6xe8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674689898015-f9omkjf93ni47qs2iu61cpo1270na0io.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
