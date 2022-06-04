@@ -23,6 +23,12 @@ public class Post {
         this.evenTime = evenTime;
     }
 
+    public Post(String uiu_coders_combat, String uiu_auditorium, String eventDate) {
+        this.eventName = uiu_coders_combat;
+        this.eventDate = eventDate;
+        this.eventVenue = uiu_auditorium;
+    }
+
     public String getEventName() {
         return eventName;
     }

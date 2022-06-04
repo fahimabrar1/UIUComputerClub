@@ -6,6 +6,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -69,7 +70,7 @@ public class Notification_fragment extends Fragment {
             String evenVenue = c.getString(5);
             String evenDate = c.getString(1);
             String evenTime = c.getString(6) +" - "+c.getString(7);
-
+//            Log.d("log","Not :"+eventName);
 
             notifications.add(new Notifications(eventName,evenVenue,evenDate,evenTime,notifTime,notifDay,notifDate));
 

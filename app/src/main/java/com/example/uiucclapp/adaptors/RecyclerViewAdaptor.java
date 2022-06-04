@@ -5,17 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.uiucclapp.RecyclerClickListener;
 import com.example.uiucclapp.R;
-import com.example.uiucclapp.classes.Notifications;
 import com.example.uiucclapp.classes.Post;
 import com.example.uiucclapp.fragments.home_fragment;
-import com.example.uiucclapp.home;
 
 import java.util.List;
 
@@ -24,7 +21,6 @@ public class RecyclerViewAdaptor extends RecyclerView.Adapter<RecyclerViewAdapto
     private static RecyclerClickListener onClickRecyclerClickListener;
     private Context context;
     private List<Post> data;
-    private List<Notifications> notifications;
     private home_fragment home_fragment;
 
     public RecyclerViewAdaptor(Context context, List<Post> data){
@@ -49,9 +45,9 @@ public class RecyclerViewAdaptor extends RecyclerView.Adapter<RecyclerViewAdapto
 
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
-        holder.title.setText(data.get(position).getTitle());
-        holder.venue.setText(data.get(position).getVenue());
-        holder.date.setText(data.get(position).getDate());
+        holder.title.setText(data.get(position).getEventName());
+        holder.venue.setText(data.get(position).getEventVenue());
+        holder.date.setText(data.get(position).getEventDate());
 
         //holder.image.setImageResource(data.get(position).getImage());
     }
@@ -68,10 +64,8 @@ public class RecyclerViewAdaptor extends RecyclerView.Adapter<RecyclerViewAdapto
         public TextView title;
         public TextView venue;
         public TextView date;
-        public View view;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            view = itemView;
             //image = itemView.findViewById(R.id.post_image);
             title = itemView.findViewById(R.id.post_title);
             venue = itemView.findViewById(R.id.post_venue);
@@ -86,10 +80,7 @@ public class RecyclerViewAdaptor extends RecyclerView.Adapter<RecyclerViewAdapto
         }
     }
 
-   /* public interface onClickListener
-    {
-        void onClick(int position, View view);
-    }*/
+
 
     public void setOnItemClickListener(RecyclerClickListener onClickRecyclerClickListener)
     {

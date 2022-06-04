@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,7 @@ public class home_fragment extends Fragment {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerViewAdaptor adapter;
-    List<Post> data;
+    ArrayList<Post> data;
     SqlDb db;
 
 
@@ -46,37 +47,36 @@ public class home_fragment extends Fragment {
 
         db = new SqlDb(view.getContext());
         data = new ArrayList<Post>();
-        loadData(view);
+//        loadData(view);
 
-//
-//        dummy = new ArrayList<Post>();
-//
-//        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
-//        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
-//        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
-//        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
-//        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
-//        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
-//        // recyclerView.setHasFixedSize(true);
-//
-//        // use a linear layout manager
-//        layoutManager = new LinearLayoutManager(view.getContext());
-//        recyclerView.setLayoutManager(layoutManager);
-//
-//        // specify an adapter (see also next example)
-//        adapter = new RecyclerViewAdaptor(this,data);
-//        recyclerView.setAdapter(adapter);
-//
-//        adapter.setOnItemClickListener(new RecyclerClickListener() {
-//            @Override
-//            public void onClick(int position, View view) {
-//                Fragment fragment = new Post_Fragment();
-//                adapter = new RecyclerViewAdaptor(home_fragment.this, dummy);
-//                recyclerView.setAdapter(adapter);
-//                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
-//                Toast.makeText( getContext(), "Position : "+position +" " ,Toast.LENGTH_SHORT ).show();
-//            }
-//        });
+
+
+        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
+        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
+        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
+        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
+        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
+        data.add(new Post("UIU CODERS COMBAT","UIU AUDITORIUM","20/12/20"));
+        // recyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        layoutManager = new LinearLayoutManager(view.getContext());
+        recyclerView.setLayoutManager(layoutManager);
+
+        // specify an adapter (see also next example)
+        adapter = new RecyclerViewAdaptor(this,data);
+        recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new RecyclerClickListener() {
+            @Override
+            public void onClick(int position, View view) {
+                Fragment fragment = new Post_Fragment();
+                adapter = new RecyclerViewAdaptor(view.getContext(), data);
+                recyclerView.setAdapter(adapter);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
+                Toast.makeText( getContext(), "Position : "+position +" " ,Toast.LENGTH_SHORT ).show();
+            }
+        });
 
     }
 
@@ -84,44 +84,50 @@ public class home_fragment extends Fragment {
     void loadData(View view){
         SQLiteDatabase myDB;
         try {
+
             myDB = db.openDB();
+            Log.d("log","Open");
 
         }catch(SQLException sqle){
+            Log.d("log","Can't Open");
 
             throw sqle;
+
         }
+
         Cursor c = myDB.rawQuery("SELECT * FROM event",null);
 
 
         c.moveToFirst();
 
-        while(! c.isAfterLast())
+
+        while(!c.isAfterLast())
         {
 
+
             String eventName = c.getString(1);
+            Log.d("log","Home :"+c.getString(1));
+
             String eventDate = c.getString(2);
             String eventVenue=c.getString(4);
             String eventDes=c.getString(5);
             String evenTime = c.getString(6) +" - "+c.getString(7);
 
-
+            Log.d("log","Home :"+eventName);
 
             data.add(new Post(eventName,eventDate,eventVenue,eventDes,evenTime));
 
             c.moveToNext();
         }
 
-        layoutManager = new LinearLayoutManager(view.getContext());
+        layoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, true);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new RecyclerViewAdaptor(this,data);
+        adapter = new RecyclerViewAdaptor(view.getContext(),data);
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new RecyclerClickListener() {
             @Override
             public void onClick(int position, View view) {
-
-//                Toast.makeText( Notice_Fragment.this.getContext(), "Notice Position : "+position +" " ,Toast.LENGTH_SHORT ).show();
-
 
                 Bundle arguments = new Bundle();
                 arguments.putString("eventName", data.get(position).getEventName());
@@ -137,22 +143,7 @@ public class home_fragment extends Fragment {
             }
         });
 
-//        adapter.setOnNoticeClick(new RecyclerClickListener() {
-//            @Override
-//            public void onClick(int position, View view) {
-////                Toast.makeText( Notice_Fragment.this.getContext(), "Notice Position : "+position +" " ,Toast.LENGTH_SHORT ).show();
-//
-//
-//                Bundle arguments = new Bundle();
-//                arguments.putString("heading", data.get(position).getEventName());
-//                arguments.putString("des", data.get(position).getEventDes());
-//
-//                Child_Notice_Fragment cnf = new Child_Notice_Fragment();
-//                cnf.setArguments(arguments);
-//                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.fragment,cnf).commit();
-//
-//            }
-//        });
+
     }
 
 
