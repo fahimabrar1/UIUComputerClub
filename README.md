@@ -56,7 +56,7 @@ And an Emulator or mobile device to test the application on.
 
 You can test this project By few simple steps.
 
-1. Clone the repo
+1. Clone the repo.
    ```sh
    git clone https://github.com/fahimabrar1/UIUComputerClub.git
    ```
@@ -64,5 +64,8 @@ You can test this project By few simple steps.
    ```sh
    firebase https://console.firebase.google.com/
    ```
-3. Download the `google-service.json` and paste it under `DIRECTORY\UIUComputerClub\app`
+3. Add a user from Authentication panel in firebase for login purpuse.
+4. Download the `google-service.json` and paste it under `DIRECTORY\UIUComputerClub\app`.
 
+5. Go to `Device File Explorer` from android studio then go to `/data/data/com.example.uiucclapp/databases/` then upload the database located at folder `database for app`.
+6. You can now build the app and test it in your device.
