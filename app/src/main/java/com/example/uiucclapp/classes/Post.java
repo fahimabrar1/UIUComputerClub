@@ -7,36 +7,39 @@ import androidx.cardview.widget.CardView;
 
 public class Post {
 
-    public int image;
-    public String title;
-    public String venue;
-    public String date;
 
-    public Post(int image, String title, String venue, String date) {
-        this.image = image;
-        this.title = title;
-        this.venue = venue;
-        this.date = date;
-    }
-    public Post( String title, String venue, String date) {
-        this.title = title;
-        this.venue = venue;
-        this.date = date;
-    }
+    String eventName;
+    String eventDate;
+    String eventVenue;
+    String eventDes;
+    String evenTime ;
 
-    public int getImage() {
-        return image;
+
+    public Post(String eventName, String eventDate, String eventVenue, String eventDes, String evenTime) {
+        this.eventName = eventName;
+        this.eventDate = eventDate;
+        this.eventVenue = eventVenue;
+        this.eventDes = eventDes;
+        this.evenTime = evenTime;
     }
 
-    public String getTitle() {
-        return title;
+    public String getEventName() {
+        return eventName;
     }
 
-    public String getVenue() {
-        return venue;
+    public String getEventDate() {
+        return eventDate;
     }
 
-    public String getDate() {
-        return date;
+    public String getEventVenue() {
+        return eventVenue;
+    }
+
+    public String getEventDes() {
+        return eventDes;
+    }
+
+    public String getEvenTime() {
+        return evenTime;
     }
 }
